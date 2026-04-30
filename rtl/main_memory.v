@@ -22,7 +22,7 @@ end
 
 always@(posedge clk) begin
 	if(u_re) begin
-		u_ready=1'b1;
+		u_ready<=1'b1;
 		if(u_we) mem[u_addr]=u_din;
 	end
 	else u_ready=1'b0;
